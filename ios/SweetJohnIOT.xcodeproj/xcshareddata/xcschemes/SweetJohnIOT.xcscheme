@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "BleManager101.app"
-               BlueprintName = "BleManager101"
-               ReferencedContainer = "container:BleManager101.xcodeproj">
+               BuildableName = "SweetJohnIOT.app"
+               BlueprintName = "SweetJohnIOT"
+               ReferencedContainer = "container:SweetJohnIOT.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "BleManager101Tests.xctest"
-               BlueprintName = "BleManager101Tests"
-               ReferencedContainer = "container:BleManager101.xcodeproj">
+               BuildableName = "SweetJohnIOTTests.xctest"
+               BlueprintName = "SweetJohnIOTTests"
+               ReferencedContainer = "container:SweetJohnIOT.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -61,9 +61,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "BleManager101Tests.xctest"
-               BlueprintName = "BleManager101Tests"
-               ReferencedContainer = "container:BleManager101.xcodeproj">
+               BuildableName = "SweetJohnIOTTests.xctest"
+               BlueprintName = "SweetJohnIOTTests"
+               ReferencedContainer = "container:SweetJohnIOT.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -71,9 +71,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "BleManager101.app"
-            BlueprintName = "BleManager101"
-            ReferencedContainer = "container:BleManager101.xcodeproj">
+            BuildableName = "SweetJohnIOT.app"
+            BlueprintName = "SweetJohnIOT"
+            ReferencedContainer = "container:SweetJohnIOT.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "BleManager101.app"
-            BlueprintName = "BleManager101"
-            ReferencedContainer = "container:BleManager101.xcodeproj">
+            BuildableName = "SweetJohnIOT.app"
+            BlueprintName = "SweetJohnIOT"
+            ReferencedContainer = "container:SweetJohnIOT.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -113,9 +113,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "BleManager101.app"
-            BlueprintName = "BleManager101"
-            ReferencedContainer = "container:BleManager101.xcodeproj">
+            BuildableName = "SweetJohnIOT.app"
+            BlueprintName = "SweetJohnIOT"
+            ReferencedContainer = "container:SweetJohnIOT.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

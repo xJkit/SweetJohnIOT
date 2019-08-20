@@ -1,4 +1,4 @@
-package com.blemanager101;
+package com.sweetjohniot;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "BleManager101";
+        return "SweetJohnIOT";
     }
 }

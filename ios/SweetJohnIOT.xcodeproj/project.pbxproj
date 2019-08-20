@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* BleManager101Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* BleManager101Tests.m */; };
+		00E356F31AD99517003FC87E /* SweetJohnIOTTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* SweetJohnIOTTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		21DB2707B8897CC5F8A76805 /* libPods-BleManager101Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21003C722FB4F1F6DEEB3D5B /* libPods-BleManager101Tests.a */; };
+		21DB2707B8897CC5F8A76805 /* libPods-SweetJohnIOTTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21003C722FB4F1F6DEEB3D5B /* libPods-SweetJohnIOTTests.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2DCD954D1E0B4F2C00145EB5 /* BleManager101Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* BleManager101Tests.m */; };
-		77B25FD66428DD75E63D87B1 /* libPods-BleManager101-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FAFA1A7C7B79FDADF7F215 /* libPods-BleManager101-tvOS.a */; };
-		CD201969DB8CE70F768346E3 /* libPods-BleManager101.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70ADF95F9E53F6FED4F2266C /* libPods-BleManager101.a */; };
-		F36F7AF220B50367F6BF4405 /* libPods-BleManager101-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64B3E2BBC0E7E14F8D31A50A /* libPods-BleManager101-tvOSTests.a */; };
+		2DCD954D1E0B4F2C00145EB5 /* SweetJohnIOTTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* SweetJohnIOTTests.m */; };
+		77B25FD66428DD75E63D87B1 /* libPods-SweetJohnIOT-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FAFA1A7C7B79FDADF7F215 /* libPods-SweetJohnIOT-tvOS.a */; };
+		CD201969DB8CE70F768346E3 /* libPods-SweetJohnIOT.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70ADF95F9E53F6FED4F2266C /* libPods-SweetJohnIOT.a */; };
+		F36F7AF220B50367F6BF4405 /* libPods-SweetJohnIOT-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64B3E2BBC0E7E14F8D31A50A /* libPods-SweetJohnIOT-tvOSTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,45 +28,45 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = BleManager101;
+			remoteInfo = SweetJohnIOT;
 		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "BleManager101-tvOS";
+			remoteInfo = "SweetJohnIOT-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* BleManager101Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BleManager101Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* SweetJohnIOTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SweetJohnIOTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* BleManager101Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BleManager101Tests.m; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* BleManager101.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BleManager101.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = BleManager101/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = BleManager101/AppDelegate.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* SweetJohnIOTTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SweetJohnIOTTests.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* SweetJohnIOT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SweetJohnIOT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = SweetJohnIOT/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = SweetJohnIOT/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = BleManager101/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = BleManager101/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = BleManager101/main.m; sourceTree = "<group>"; };
-		1938E1758A749F5B6E8DD5FF /* Pods-BleManager101-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BleManager101-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-BleManager101-tvOSTests/Pods-BleManager101-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		21003C722FB4F1F6DEEB3D5B /* libPods-BleManager101Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BleManager101Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E47B1E0B4A5D006451C7 /* BleManager101-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BleManager101-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* BleManager101-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BleManager101-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F0705042B815EA71E86FDBE /* Pods-BleManager101.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BleManager101.debug.xcconfig"; path = "Target Support Files/Pods-BleManager101/Pods-BleManager101.debug.xcconfig"; sourceTree = "<group>"; };
-		64B3E2BBC0E7E14F8D31A50A /* libPods-BleManager101-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BleManager101-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		70ADF95F9E53F6FED4F2266C /* libPods-BleManager101.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BleManager101.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C119AFB74566707BFACDF07 /* Pods-BleManager101-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BleManager101-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-BleManager101-tvOSTests/Pods-BleManager101-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		7F295BB944A6080CF5B52357 /* Pods-BleManager101-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BleManager101-tvOS.release.xcconfig"; path = "Target Support Files/Pods-BleManager101-tvOS/Pods-BleManager101-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		8DA03FD6895B51D8983D917B /* Pods-BleManager101.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BleManager101.release.xcconfig"; path = "Target Support Files/Pods-BleManager101/Pods-BleManager101.release.xcconfig"; sourceTree = "<group>"; };
-		BCA3FFC0EDB21C2E4D03258F /* Pods-BleManager101Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BleManager101Tests.release.xcconfig"; path = "Target Support Files/Pods-BleManager101Tests/Pods-BleManager101Tests.release.xcconfig"; sourceTree = "<group>"; };
-		D4FAFA1A7C7B79FDADF7F215 /* libPods-BleManager101-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BleManager101-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SweetJohnIOT/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SweetJohnIOT/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = SweetJohnIOT/main.m; sourceTree = "<group>"; };
+		1938E1758A749F5B6E8DD5FF /* Pods-SweetJohnIOT-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SweetJohnIOT-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-SweetJohnIOT-tvOSTests/Pods-SweetJohnIOT-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		21003C722FB4F1F6DEEB3D5B /* libPods-SweetJohnIOTTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SweetJohnIOTTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E47B1E0B4A5D006451C7 /* SweetJohnIOT-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SweetJohnIOT-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* SweetJohnIOT-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SweetJohnIOT-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F0705042B815EA71E86FDBE /* Pods-SweetJohnIOT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SweetJohnIOT.debug.xcconfig"; path = "Target Support Files/Pods-SweetJohnIOT/Pods-SweetJohnIOT.debug.xcconfig"; sourceTree = "<group>"; };
+		64B3E2BBC0E7E14F8D31A50A /* libPods-SweetJohnIOT-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SweetJohnIOT-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		70ADF95F9E53F6FED4F2266C /* libPods-SweetJohnIOT.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SweetJohnIOT.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C119AFB74566707BFACDF07 /* Pods-SweetJohnIOT-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SweetJohnIOT-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-SweetJohnIOT-tvOSTests/Pods-SweetJohnIOT-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7F295BB944A6080CF5B52357 /* Pods-SweetJohnIOT-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SweetJohnIOT-tvOS.release.xcconfig"; path = "Target Support Files/Pods-SweetJohnIOT-tvOS/Pods-SweetJohnIOT-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		8DA03FD6895B51D8983D917B /* Pods-SweetJohnIOT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SweetJohnIOT.release.xcconfig"; path = "Target Support Files/Pods-SweetJohnIOT/Pods-SweetJohnIOT.release.xcconfig"; sourceTree = "<group>"; };
+		BCA3FFC0EDB21C2E4D03258F /* Pods-SweetJohnIOTTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SweetJohnIOTTests.release.xcconfig"; path = "Target Support Files/Pods-SweetJohnIOTTests/Pods-SweetJohnIOTTests.release.xcconfig"; sourceTree = "<group>"; };
+		D4FAFA1A7C7B79FDADF7F215 /* libPods-SweetJohnIOT-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SweetJohnIOT-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		EFB3059CA98C13F0B44D01BA /* Pods-BleManager101-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BleManager101-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-BleManager101-tvOS/Pods-BleManager101-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		F0A5E3046EFF44505098B517 /* Pods-BleManager101Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BleManager101Tests.debug.xcconfig"; path = "Target Support Files/Pods-BleManager101Tests/Pods-BleManager101Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		EFB3059CA98C13F0B44D01BA /* Pods-SweetJohnIOT-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SweetJohnIOT-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-SweetJohnIOT-tvOS/Pods-SweetJohnIOT-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		F0A5E3046EFF44505098B517 /* Pods-SweetJohnIOTTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SweetJohnIOTTests.debug.xcconfig"; path = "Target Support Files/Pods-SweetJohnIOTTests/Pods-SweetJohnIOTTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21DB2707B8897CC5F8A76805 /* libPods-BleManager101Tests.a in Frameworks */,
+				21DB2707B8897CC5F8A76805 /* libPods-SweetJohnIOTTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD201969DB8CE70F768346E3 /* libPods-BleManager101.a in Frameworks */,
+				CD201969DB8CE70F768346E3 /* libPods-SweetJohnIOT.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77B25FD66428DD75E63D87B1 /* libPods-BleManager101-tvOS.a in Frameworks */,
+				77B25FD66428DD75E63D87B1 /* libPods-SweetJohnIOT-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,20 +98,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F36F7AF220B50367F6BF4405 /* libPods-BleManager101-tvOSTests.a in Frameworks */,
+				F36F7AF220B50367F6BF4405 /* libPods-SweetJohnIOT-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* BleManager101Tests */ = {
+		00E356EF1AD99517003FC87E /* SweetJohnIOTTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* BleManager101Tests.m */,
+				00E356F21AD99517003FC87E /* SweetJohnIOTTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = BleManager101Tests;
+			path = SweetJohnIOTTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -125,19 +125,19 @@
 		0A6C3E0C0FFBF018FB934B1D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2F0705042B815EA71E86FDBE /* Pods-BleManager101.debug.xcconfig */,
-				8DA03FD6895B51D8983D917B /* Pods-BleManager101.release.xcconfig */,
-				EFB3059CA98C13F0B44D01BA /* Pods-BleManager101-tvOS.debug.xcconfig */,
-				7F295BB944A6080CF5B52357 /* Pods-BleManager101-tvOS.release.xcconfig */,
-				7C119AFB74566707BFACDF07 /* Pods-BleManager101-tvOSTests.debug.xcconfig */,
-				1938E1758A749F5B6E8DD5FF /* Pods-BleManager101-tvOSTests.release.xcconfig */,
-				F0A5E3046EFF44505098B517 /* Pods-BleManager101Tests.debug.xcconfig */,
-				BCA3FFC0EDB21C2E4D03258F /* Pods-BleManager101Tests.release.xcconfig */,
+				2F0705042B815EA71E86FDBE /* Pods-SweetJohnIOT.debug.xcconfig */,
+				8DA03FD6895B51D8983D917B /* Pods-SweetJohnIOT.release.xcconfig */,
+				EFB3059CA98C13F0B44D01BA /* Pods-SweetJohnIOT-tvOS.debug.xcconfig */,
+				7F295BB944A6080CF5B52357 /* Pods-SweetJohnIOT-tvOS.release.xcconfig */,
+				7C119AFB74566707BFACDF07 /* Pods-SweetJohnIOT-tvOSTests.debug.xcconfig */,
+				1938E1758A749F5B6E8DD5FF /* Pods-SweetJohnIOT-tvOSTests.release.xcconfig */,
+				F0A5E3046EFF44505098B517 /* Pods-SweetJohnIOTTests.debug.xcconfig */,
+				BCA3FFC0EDB21C2E4D03258F /* Pods-SweetJohnIOTTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* BleManager101 */ = {
+		13B07FAE1A68108700A75B9A /* SweetJohnIOT */ = {
 			isa = PBXGroup;
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -148,7 +148,7 @@
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = BleManager101;
+			name = SweetJohnIOT;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -156,10 +156,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				70ADF95F9E53F6FED4F2266C /* libPods-BleManager101.a */,
-				D4FAFA1A7C7B79FDADF7F215 /* libPods-BleManager101-tvOS.a */,
-				64B3E2BBC0E7E14F8D31A50A /* libPods-BleManager101-tvOSTests.a */,
-				21003C722FB4F1F6DEEB3D5B /* libPods-BleManager101Tests.a */,
+				70ADF95F9E53F6FED4F2266C /* libPods-SweetJohnIOT.a */,
+				D4FAFA1A7C7B79FDADF7F215 /* libPods-SweetJohnIOT-tvOS.a */,
+				64B3E2BBC0E7E14F8D31A50A /* libPods-SweetJohnIOT-tvOSTests.a */,
+				21003C722FB4F1F6DEEB3D5B /* libPods-SweetJohnIOTTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -174,9 +174,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* BleManager101 */,
+				13B07FAE1A68108700A75B9A /* SweetJohnIOT */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* BleManager101Tests */,
+				00E356EF1AD99517003FC87E /* SweetJohnIOTTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				0A6C3E0C0FFBF018FB934B1D /* Pods */,
@@ -189,10 +189,10 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* BleManager101.app */,
-				00E356EE1AD99517003FC87E /* BleManager101Tests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* BleManager101-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* BleManager101-tvOSTests.xctest */,
+				13B07F961A680F5B00A75B9A /* SweetJohnIOT.app */,
+				00E356EE1AD99517003FC87E /* SweetJohnIOTTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* SweetJohnIOT-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* SweetJohnIOT-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -200,9 +200,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* BleManager101Tests */ = {
+		00E356ED1AD99517003FC87E /* SweetJohnIOTTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "BleManager101Tests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "SweetJohnIOTTests" */;
 			buildPhases = (
 				BDA4DA6B8D8F005EB0F0DC5D /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -214,14 +214,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = BleManager101Tests;
-			productName = BleManager101Tests;
-			productReference = 00E356EE1AD99517003FC87E /* BleManager101Tests.xctest */;
+			name = SweetJohnIOTTests;
+			productName = SweetJohnIOTTests;
+			productReference = 00E356EE1AD99517003FC87E /* SweetJohnIOTTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* BleManager101 */ = {
+		13B07F861A680F5B00A75B9A /* SweetJohnIOT */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "BleManager101" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "SweetJohnIOT" */;
 			buildPhases = (
 				54132919B98C9CAF25D02161 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -234,14 +234,14 @@
 			);
 			dependencies = (
 			);
-			name = BleManager101;
-			productName = BleManager101;
-			productReference = 13B07F961A680F5B00A75B9A /* BleManager101.app */;
+			name = SweetJohnIOT;
+			productName = SweetJohnIOT;
+			productReference = 13B07F961A680F5B00A75B9A /* SweetJohnIOT.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* BleManager101-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* SweetJohnIOT-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "BleManager101-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "SweetJohnIOT-tvOS" */;
 			buildPhases = (
 				791FA44403A699FB461611D3 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
@@ -254,14 +254,14 @@
 			);
 			dependencies = (
 			);
-			name = "BleManager101-tvOS";
-			productName = "BleManager101-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* BleManager101-tvOS.app */;
+			name = "SweetJohnIOT-tvOS";
+			productName = "SweetJohnIOT-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* SweetJohnIOT-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* BleManager101-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* SweetJohnIOT-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "BleManager101-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "SweetJohnIOT-tvOSTests" */;
 			buildPhases = (
 				DB1310DC675BBA5340F857DF /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
@@ -273,9 +273,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "BleManager101-tvOSTests";
-			productName = "BleManager101-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* BleManager101-tvOSTests.xctest */;
+			name = "SweetJohnIOT-tvOSTests";
+			productName = "SweetJohnIOT-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* SweetJohnIOT-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -306,7 +306,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "BleManager101" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "SweetJohnIOT" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -319,10 +319,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* BleManager101 */,
-				00E356ED1AD99517003FC87E /* BleManager101Tests */,
-				2D02E47A1E0B4A5D006451C7 /* BleManager101-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* BleManager101-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* SweetJohnIOT */,
+				00E356ED1AD99517003FC87E /* SweetJohnIOTTests */,
+				2D02E47A1E0B4A5D006451C7 /* SweetJohnIOT-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* SweetJohnIOT-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -405,7 +405,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BleManager101-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SweetJohnIOT-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -427,7 +427,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BleManager101-tvOS-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SweetJohnIOT-tvOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -449,7 +449,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BleManager101Tests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SweetJohnIOTTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -471,7 +471,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BleManager101-tvOSTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SweetJohnIOT-tvOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -523,7 +523,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* BleManager101Tests.m in Sources */,
+				00E356F31AD99517003FC87E /* SweetJohnIOTTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,7 +549,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCD954D1E0B4F2C00145EB5 /* BleManager101Tests.m in Sources */,
+				2DCD954D1E0B4F2C00145EB5 /* SweetJohnIOTTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,12 +558,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* BleManager101 */;
+			target = 13B07F861A680F5B00A75B9A /* SweetJohnIOT */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* BleManager101-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* SweetJohnIOT-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -575,7 +575,7 @@
 				13B07FB21A68108700A75B9A /* Base */,
 			);
 			name = LaunchScreen.xib;
-			path = BleManager101;
+			path = SweetJohnIOT;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -583,7 +583,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F0A5E3046EFF44505098B517 /* Pods-BleManager101Tests.debug.xcconfig */;
+			baseConfigurationReference = F0A5E3046EFF44505098B517 /* Pods-SweetJohnIOTTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 78P97U7E4N;
@@ -591,7 +591,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = BleManager101Tests/Info.plist;
+				INFOPLIST_FILE = SweetJohnIOTTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -601,18 +601,18 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BleManager101.app/BleManager101";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SweetJohnIOT.app/SweetJohnIOT";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BCA3FFC0EDB21C2E4D03258F /* Pods-BleManager101Tests.release.xcconfig */;
+			baseConfigurationReference = BCA3FFC0EDB21C2E4D03258F /* Pods-SweetJohnIOTTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = 78P97U7E4N;
-				INFOPLIST_FILE = BleManager101Tests/Info.plist;
+				INFOPLIST_FILE = SweetJohnIOTTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -622,19 +622,19 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BleManager101.app/BleManager101";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SweetJohnIOT.app/SweetJohnIOT";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F0705042B815EA71E86FDBE /* Pods-BleManager101.debug.xcconfig */;
+			baseConfigurationReference = 2F0705042B815EA71E86FDBE /* Pods-SweetJohnIOT.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = 78P97U7E4N;
-				INFOPLIST_FILE = BleManager101/Info.plist;
+				INFOPLIST_FILE = SweetJohnIOT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -642,19 +642,19 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = BleManager101;
+				PRODUCT_NAME = SweetJohnIOT;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8DA03FD6895B51D8983D917B /* Pods-BleManager101.release.xcconfig */;
+			baseConfigurationReference = 8DA03FD6895B51D8983D917B /* Pods-SweetJohnIOT.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 78P97U7E4N;
-				INFOPLIST_FILE = BleManager101/Info.plist;
+				INFOPLIST_FILE = SweetJohnIOT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -662,14 +662,14 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = BleManager101;
+				PRODUCT_NAME = SweetJohnIOT;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EFB3059CA98C13F0B44D01BA /* Pods-BleManager101-tvOS.debug.xcconfig */;
+			baseConfigurationReference = EFB3059CA98C13F0B44D01BA /* Pods-SweetJohnIOT-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -680,14 +680,14 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "BleManager101-tvOS/Info.plist";
+				INFOPLIST_FILE = "SweetJohnIOT-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.BleManager101-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.SweetJohnIOT-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -697,7 +697,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7F295BB944A6080CF5B52357 /* Pods-BleManager101-tvOS.release.xcconfig */;
+			baseConfigurationReference = 7F295BB944A6080CF5B52357 /* Pods-SweetJohnIOT-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -708,14 +708,14 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "BleManager101-tvOS/Info.plist";
+				INFOPLIST_FILE = "SweetJohnIOT-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.BleManager101-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.SweetJohnIOT-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -725,7 +725,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C119AFB74566707BFACDF07 /* Pods-BleManager101-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = 7C119AFB74566707BFACDF07 /* Pods-SweetJohnIOT-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -735,24 +735,24 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "BleManager101-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "SweetJohnIOT-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.BleManager101-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.SweetJohnIOT-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BleManager101-tvOS.app/BleManager101-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SweetJohnIOT-tvOS.app/SweetJohnIOT-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1938E1758A749F5B6E8DD5FF /* Pods-BleManager101-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = 1938E1758A749F5B6E8DD5FF /* Pods-SweetJohnIOT-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -762,17 +762,17 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "BleManager101-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "SweetJohnIOT-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.BleManager101-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.SweetJohnIOT-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BleManager101-tvOS.app/BleManager101-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SweetJohnIOT-tvOS.app/SweetJohnIOT-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
@@ -881,7 +881,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "BleManager101Tests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "SweetJohnIOTTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -890,7 +890,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "BleManager101" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "SweetJohnIOT" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -899,7 +899,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "BleManager101-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "SweetJohnIOT-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -908,7 +908,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "BleManager101-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "SweetJohnIOT-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -917,7 +917,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "BleManager101" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "SweetJohnIOT" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

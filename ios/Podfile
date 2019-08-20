@@ -1,8 +1,8 @@
 platform :ios, '9.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-target 'BleManager101' do
-  # Pods for BleManager101
+target 'SweetJohnIOT' do
+  # Pods for SweetJohnIOT
   pod 'React', :path => '../node_modules/react-native/'
   pod 'React-Core', :path => '../node_modules/react-native/React'
   pod 'React-DevSupport', :path => '../node_modules/react-native/React'
@@ -29,7 +29,7 @@ target 'BleManager101' do
 
   pod 'react-native-ble-manager', :path => '../node_modules/react-native-ble-manager'
 
-  target 'BleManager101Tests' do
+  target 'SweetJohnIOTTests' do
     inherit! :search_paths
     # Pods for testing
   end
@@ -37,10 +37,10 @@ target 'BleManager101' do
   use_native_modules!
 end
 
-target 'BleManager101-tvOS' do
-  # Pods for BleManager101-tvOS
+target 'SweetJohnIOT-tvOS' do
+  # Pods for SweetJohnIOT-tvOS
 
-  target 'BleManager101-tvOSTests' do
+  target 'SweetJohnIOT-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end

@@ -1,4 +1,4 @@
-package com.blemanager101;
+package com.sweetjohniot;
 
 import android.app.Application;
 import android.util.Log;
