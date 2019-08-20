@@ -1,4 +1,4 @@
-import React, {Fragment, useEffect} from 'react';
+import React, {useEffect, useCallback} from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -9,28 +9,27 @@ import {
   Text,
   StatusBar,
 } from 'react-native';
-
+import {useAppState} from './hooks';
 import BleManager from 'react-native-ble-manager';
 const BleManagerModule = NativeModules.BleManager;
 const bleManagerEmitter = new NativeEventEmitter(BleManagerModule);
 
+
 const App = () => {
-  const usingHermes = typeof HermesInternal === 'object' && HermesInternal !== null;
-  useEffect(() => {
-    console.log('React native started!');
-  })
+  const appState = useAppState();
+  console.log('app state: ', appState);
   return (
-    <Fragment>
+    <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}
         >
-          <Text style={{ fontSize: 64 }}>React Native Start 4</Text>
+          <Text style={{ fontSize: 64 }}>React Native Start </Text>
         </ScrollView>
       </SafeAreaView>
-    </Fragment>
+    </>
   );
 };
 
