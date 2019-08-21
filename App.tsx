@@ -1,4 +1,4 @@
-import React, {useEffect, useCallback, useState, useRef} from 'react';
+import React, {useEffect, useCallback, useState, useReducer} from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -8,44 +8,61 @@ import {
   View,
   Text,
   StatusBar,
+  Button
 } from 'react-native';
 import {useAppState} from './hooks';
 
 /** BLE Modules */
-import { BleEventType, BleState, PeripheralType } from './types';
-import BleManager from 'react-native-ble-manager';
+import { BleEventType, BleState, PeripheralType, ActionTypes, FindPeripheralDeviceAction } from './types';
+import BleManager, { Peripheral } from 'react-native-ble-manager';
 const BleManagerModule = NativeModules.BleManager;
 const bleManagerEmitter = new NativeEventEmitter(BleManagerModule);
 /** */
 
+const findPeripheralsReducer = (state: PeripheralType[], action: FindPeripheralDeviceAction) => {
+  switch (action.type) {
+    case ActionTypes.FIND_PERIPHERAL_DEVICE: {
+      const isDeviceAlreadyFound = state.find(peripheral => peripheral.id === action.payload.id);
+      if (isDeviceAlreadyFound) return state;
+      return state.concat(action.payload);
+    }
+    default:
+      throw new Error('Invalid action type');
+  }
+}
+
 function App() {
   const appState = useAppState();
-  const [peripherals, setPeripherals] = useState<PeripheralType[]>([]);
-  const peripheralsRef = useRef(peripherals);
   const [bleState, setBleState] = useState(BleState.on);
-  console.log('app state: ', appState);
-  console.log('ble state: ', bleState);
+  const [foundPeripherals, dispatch] = useReducer(findPeripheralsReducer, []);
+
+  const handleBleDiscoverPeripherals = useCallback((peripheral: PeripheralType) => {
+    if (peripheral.id) {
+      console.log('======= Found new peripheral: ', peripheral.name);
+      dispatch({
+        type: ActionTypes.FIND_PERIPHERAL_DEVICE,
+        payload: peripheral,
+      });
+    }
+  }, []);
+  const handleBleUpdateState = useCallback((args) => {
+    console.log(BleEventType.DidUpdateState, args);
+    setBleState(args.state);
+  }, []);
+  console.log('--- app state: ', appState);
+  console.log('--- ble state: ', bleState);
 
   useEffect(() => {
-    console.log('BLE is ready to start...');
     BleManager.start({ showAlert: false })
     .then(() => {
-      BleManager.scan([], 3, true).then(() => console.log('BLE starts scanning..'));
+      console.log('=== BLE Start Success!===');
+      BleManager.scan([], 3, true).then(() => console.log('=== BLE starts scanning ==='));
       BleManager.checkState() // trigger BleManagerDidUpdateState event
     })
-    .catch(err => console.log('Ble initialize error: ', err));
+    .catch(err => console.log('=== Ble initialize error: ', err));
 
-    bleManagerEmitter.addListener(BleEventType.DiscoverPeripheral, (peripheral: PeripheralType) => {
-      if (peripheral.id && !peripheralsRef.current.find(p => p.id === peripheral.id)) {
-        console.log('Found new peripheral: ', peripheral.name);
-        setPeripherals(prevPeripherals => prevPeripherals.concat(peripheral));
-        peripheralsRef.current.push(peripheral);
-      }
-    })
-    bleManagerEmitter.addListener(BleEventType.DidUpdateState, (args) => {
-      console.log(BleEventType.DidUpdateState, args);
-      setBleState(args.state);
-    })
+    bleManagerEmitter.addListener(BleEventType.DiscoverPeripheral, handleBleDiscoverPeripherals);
+    bleManagerEmitter.addListener(BleEventType.DidUpdateState, handleBleUpdateState);
   }, []);
 
   /** */
@@ -54,19 +71,27 @@ function App() {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView style={{ flex: 1, padding: 8, alignItems: 'center' }}>
-        <ScrollView>
-          <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center' }}>
-            <Text style={{ fontSize: 32 }}>{`BLE devices (${peripherals.length})`}</Text>
-            {bleState === BleState.on && <Text style={{ fontSize: 24, fontWeight: 'bold', color: 'green' }}>ON</Text>}
-            {bleState === BleState.off && <Text style={{ fontSize: 24, fontWeight: 'bold', color: 'red' }}>OFF</Text>}
-          </View>
-          {peripherals.map((peripheral, idx) => (
-            <View key={peripheral.id} style={{ marginBottom: 16 }}>
-              <Text>{peripheral.id}</Text>
-              <Text style={{ fontWeight: 'bold' }}>{peripheral.name}</Text>
+        <View style={{ flex: 1 }}>
+          <ScrollView>
+            <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center' }}>
+              <Text style={{ fontSize: 32 }}>{`BLE devices (${foundPeripherals.length})`}</Text>
+              {bleState === BleState.on && <Text style={{ fontSize: 24, fontWeight: 'bold', color: 'green' }}>ON</Text>}
+              {bleState === BleState.off && <Text style={{ fontSize: 24, fontWeight: 'bold', color: 'red' }}>OFF</Text>}
             </View>
-          ))}
-        </ScrollView>
+            {foundPeripherals.map((peripheral) => (
+              <View key={peripheral.id} style={{ marginBottom: 16 }}>
+                <Text>{peripheral.id}</Text>
+                <Text style={{ fontWeight: 'bold' }}>{peripheral.name}</Text>
+              </View>
+            ))}
+          </ScrollView>
+        </View>
+        <View style={{ alignItems: 'center' }}>
+          <Button
+            title="Scan"
+            onPress={() => BleManager.scan([], 3, true).then(() => console.log('=== BLE starts scanning ==='))}
+          />
+        </View>
       </SafeAreaView>
     </>
   );

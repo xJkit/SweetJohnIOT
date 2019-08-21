@@ -11,7 +11,18 @@ export enum BleState {
   off = 'off',
 };
 
-export interface PeripheralType {
+export type PeripheralType = {
   name: string;
   id: string;
 };
+
+export enum ActionTypes {
+  FIND_PERIPHERAL_DEVICE,
+};
+
+export type FindPeripheralDeviceAction = {
+  type: ActionTypes.FIND_PERIPHERAL_DEVICE;
+  payload: PeripheralType
+};
+
+
