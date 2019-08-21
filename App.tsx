@@ -12,28 +12,11 @@ import {
 import {useAppState} from './hooks';
 
 /** BLE Modules */
+import { BleEventType, BleState, PeripheralType } from './types';
 import BleManager from 'react-native-ble-manager';
 const BleManagerModule = NativeModules.BleManager;
 const bleManagerEmitter = new NativeEventEmitter(BleManagerModule);
 /** */
-
-enum BleEventType {
-  DiscoverPeripheral = 'BleManagerDiscoverPeripheral',
-  StopScan = 'BleManagerStopScan',
-  DisconnectPeripheral = 'BleManagerDisconnectPeripheral',
-  DidUpdateValueForCharacteristic = 'BleManagerDidUpdateValueForCharacteristic',
-  DidUpdateState = 'BleManagerDidUpdateState',
-};
-
-enum BleState {
-  on = 'on',
-  off = 'off',
-};
-
-interface PeripheralType {
-  name: string;
-  id: string;
-};
 
 function App() {
   const appState = useAppState();
