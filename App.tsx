@@ -10,8 +10,8 @@ import {
   StatusBar,
 } from 'react-native';
 import { Button } from 'react-native-elements';
-import Icon from 'react-native-vector-icons/FontAwesome';
-import IconMaterial from 'react-native-vector-icons/MaterialCommunityIcons';
+
+import Icons from './src/components/Icons';
 import {useAppState} from './hooks';
 
 /** BLE Modules */
@@ -77,8 +77,8 @@ function App() {
           <ScrollView>
             <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center' }}>
               <Text style={{ fontSize: 32 }}>{`BLE devices (${foundPeripherals.length})`}</Text>
-              {bleState === BleState.on && <Icon name="power-off" size={32} color="green" style={{ marginLeft: 8 }} />}
-              {bleState === BleState.off && <Icon name="power-off" size={32} color="red" style={{ marginLeft: 8 }} />}
+              {bleState === BleState.on && <Icons.FontAwesome name="power-off" size={32} color="green" style={{ marginLeft: 8 }} />}
+              {bleState === BleState.off && <Icons.FontAwesome name="power-off" size={32} color="red" style={{ marginLeft: 8 }} />}
             </View>
             {foundPeripherals.map((peripheral) => (
               <View key={peripheral.id} style={{ marginBottom: 16 }}>
@@ -92,7 +92,7 @@ function App() {
           <Button
             title="Scan"
             style={{ marginBottom: 8 }}
-            icon={<IconMaterial name="shield-search" color="white" style={{ marginRight: 8 }} size={22} />}
+            icon={<Icons.MaterialCommunityIcons name="shield-search" color="white" style={{ marginRight: 8 }} size={22} />}
             onPress={() => BleManager.scan([], 3, true).then(() => console.log('=== BLE starts scanning ==='))}
           />
         </View>
