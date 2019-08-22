@@ -18,11 +18,11 @@ export type PeripheralType = {
 
 export enum ActionTypes {
   FIND_PERIPHERAL_DEVICE,
+  CLEAR_PERIPHERAL_DEVICE,
 };
 
-export type FindPeripheralDeviceAction = {
-  type: ActionTypes.FIND_PERIPHERAL_DEVICE;
-  payload: PeripheralType
-};
+export type FindPeripheralDeviceActions =
+  | { type: ActionTypes.FIND_PERIPHERAL_DEVICE, payload: PeripheralType }
+  | { type: ActionTypes.CLEAR_PERIPHERAL_DEVICE };
 
 

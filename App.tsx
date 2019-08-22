@@ -16,19 +16,21 @@ import Icons from './src/components/Icons';
 import {useAppState} from './hooks';
 
 /** BLE Modules */
-import { BleEventType, BleState, PeripheralType, ActionTypes, FindPeripheralDeviceAction } from './types';
+import { BleEventType, BleState, PeripheralType, ActionTypes, FindPeripheralDeviceActions } from './types';
 import BleManager, { Peripheral } from 'react-native-ble-manager';
 const BleManagerModule = NativeModules.BleManager;
 const bleManagerEmitter = new NativeEventEmitter(BleManagerModule);
 /** */
 
-const findPeripheralsReducer = (state: PeripheralType[], action: FindPeripheralDeviceAction) => {
+const findPeripheralsReducer = (state: PeripheralType[], action: FindPeripheralDeviceActions) => {
   switch (action.type) {
     case ActionTypes.FIND_PERIPHERAL_DEVICE: {
       const isDeviceAlreadyFound = state.find(peripheral => peripheral.id === action.payload.id);
       if (isDeviceAlreadyFound) return state;
       return state.concat(action.payload);
-    }
+    };
+    case ActionTypes.CLEAR_PERIPHERAL_DEVICE:
+      return [];
     default:
       throw new Error('Invalid action type');
   }
@@ -99,11 +101,10 @@ function App() {
             ))}
           </ScrollView>
         </View>
-        <View style={{ alignItems: 'center' }}>
+        <View style={{ alignItems: 'center', flexDirection: 'row', marginBottom: 8 }}>
           <Button
             disabled={isScanning}
             title={isScanning ? 'Scanning' : 'Scan'}
-            style={{ marginBottom: 8 }}
             icon={
               <>
                 {isScanning && <ActivityIndicator style={{ marginRight: 8 }} />}
@@ -118,6 +119,12 @@ function App() {
               </>
             }
             onPress={handleBleStartScan}
+          />
+          <Button
+            title="Clear"
+            onPress={() => dispatch({ type: ActionTypes.CLEAR_PERIPHERAL_DEVICE })}
+            style={{ marginLeft: 8 }}
+            buttonStyle={{ backgroundColor: 'red' }}
           />
         </View>
       </SafeAreaView>
