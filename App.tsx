@@ -8,6 +8,7 @@ import {
   View,
   Text,
   StatusBar,
+  ActivityIndicator,
 } from 'react-native';
 import { Button } from 'react-native-elements';
 
@@ -36,8 +37,13 @@ const findPeripheralsReducer = (state: PeripheralType[], action: FindPeripheralD
 function App() {
   const appState = useAppState();
   const [bleState, setBleState] = useState(BleState.on);
+  const [isScanning, setIsScanning] = useState(false);
   const [foundPeripherals, dispatch] = useReducer(findPeripheralsReducer, []);
 
+  const handleBleStartScan = () => {
+    BleManager.scan([], 3, true)
+      .then(() => setIsScanning(true));
+  };
   const handleBleDiscoverPeripherals = useCallback((peripheral: PeripheralType) => {
     if (peripheral.id) {
       console.log('======= Found new peripheral: ', peripheral.name);
@@ -51,6 +57,10 @@ function App() {
     console.log(BleEventType.DidUpdateState, args);
     setBleState(args.state);
   }, []);
+
+  const handleStopScan = useCallback(() => {
+    setIsScanning(false);
+  }, []);
   console.log('--- app state: ', appState);
   console.log('--- ble state: ', bleState);
 
@@ -58,13 +68,14 @@ function App() {
     BleManager.start({ showAlert: false })
     .then(() => {
       console.log('=== BLE Start Success!===');
-      BleManager.scan([], 3, true).then(() => console.log('=== BLE starts scanning ==='));
+      handleBleStartScan();
       BleManager.checkState() // trigger BleManagerDidUpdateState event
     })
     .catch(err => console.log('=== Ble initialize error: ', err));
 
     bleManagerEmitter.addListener(BleEventType.DiscoverPeripheral, handleBleDiscoverPeripherals);
     bleManagerEmitter.addListener(BleEventType.DidUpdateState, handleBleUpdateState);
+    bleManagerEmitter.addListener(BleEventType.StopScan, handleStopScan);
   }, []);
 
   /** */
@@ -90,10 +101,23 @@ function App() {
         </View>
         <View style={{ alignItems: 'center' }}>
           <Button
-            title="Scan"
+            disabled={isScanning}
+            title={isScanning ? 'Scanning' : 'Scan'}
             style={{ marginBottom: 8 }}
-            icon={<Icons.MaterialCommunityIcons name="shield-search" color="white" style={{ marginRight: 8 }} size={22} />}
-            onPress={() => BleManager.scan([], 3, true).then(() => console.log('=== BLE starts scanning ==='))}
+            icon={
+              <>
+                {isScanning && <ActivityIndicator style={{ marginRight: 8 }} />}
+                {!isScanning && (
+                  <Icons.MaterialCommunityIcons
+                    name="shield-search"
+                    color="white"
+                    size={22}
+                    style={{ marginRight: 8 }}
+                  />
+                )}
+              </>
+            }
+            onPress={handleBleStartScan}
           />
         </View>
       </SafeAreaView>
