@@ -10,7 +10,7 @@ import {
   StatusBar,
   ActivityIndicator,
 } from 'react-native';
-import { Button } from 'react-native-elements';
+import { Button, ListItem } from 'react-native-elements';
 
 import Icons from './src/components/Icons';
 import {useAppState} from './hooks';
@@ -86,18 +86,21 @@ function App() {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView style={{ flex: 1, padding: 8, alignItems: 'center' }}>
-        <View style={{ flex: 1 }}>
+        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+          <Text style={{ fontSize: 32 }}>{`BLE devices (${foundPeripherals.length})`}</Text>
+          {bleState === BleState.on && <Icons.FontAwesome name="power-off" size={32} color="green" style={{ marginLeft: 8 }} />}
+          {bleState === BleState.off && <Icons.FontAwesome name="power-off" size={32} color="red" style={{ marginLeft: 8 }} />}
+        </View>
+        <View style={{ flex: 1, width: '100%' }}>
           <ScrollView>
-            <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center' }}>
-              <Text style={{ fontSize: 32 }}>{`BLE devices (${foundPeripherals.length})`}</Text>
-              {bleState === BleState.on && <Icons.FontAwesome name="power-off" size={32} color="green" style={{ marginLeft: 8 }} />}
-              {bleState === BleState.off && <Icons.FontAwesome name="power-off" size={32} color="red" style={{ marginLeft: 8 }} />}
-            </View>
             {foundPeripherals.map((peripheral) => (
-              <View key={peripheral.id} style={{ marginBottom: 16 }}>
-                <Text>{peripheral.id}</Text>
-                <Text style={{ fontWeight: 'bold' }}>{peripheral.name}</Text>
-              </View>
+              <ListItem
+                key={peripheral.id}
+                title={peripheral.name || 'Unknown'}
+                titleStyle={{ fontWeight: 'bold' }}
+                subtitle={peripheral.id}
+                subtitleStyle={{ color: 'grey', fontSize: 14 }}
+              />
             ))}
           </ScrollView>
         </View>
