@@ -1,5 +1,6 @@
 import React, {useEffect, useCallback, useState, useReducer} from 'react';
 import {
+  Alert,
   SafeAreaView,
   StyleSheet,
   ScrollView,
@@ -43,6 +44,14 @@ function App() {
   const [foundPeripherals, dispatch] = useReducer(findPeripheralsReducer, []);
 
   const handleBleStartScan = () => {
+    if (bleState !== 'on') {
+      Alert.alert(
+        'Please turn on Bluetooth',
+        undefined,
+        [{ text: 'OK' }]
+      );
+      return;
+    }
     BleManager.scan([], 3, true)
       .then(() => setIsScanning(true));
   };
@@ -70,7 +79,6 @@ function App() {
     BleManager.start({ showAlert: false })
     .then(() => {
       console.log('=== BLE Start Success!===');
-      handleBleStartScan();
       BleManager.checkState() // trigger BleManagerDidUpdateState event
     })
     .catch(err => console.log('=== Ble initialize error: ', err));
