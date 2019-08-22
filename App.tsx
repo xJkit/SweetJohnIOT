@@ -8,9 +8,10 @@ import {
   View,
   Text,
   StatusBar,
-  Button
 } from 'react-native';
+import { Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import IconMaterial from 'react-native-vector-icons/MaterialCommunityIcons';
 import {useAppState} from './hooks';
 
 /** BLE Modules */
@@ -90,6 +91,8 @@ function App() {
         <View style={{ alignItems: 'center' }}>
           <Button
             title="Scan"
+            style={{ marginBottom: 8 }}
+            icon={<IconMaterial name="shield-search" color="white" style={{ marginRight: 8 }} size={22} />}
             onPress={() => BleManager.scan([], 3, true).then(() => console.log('=== BLE starts scanning ==='))}
           />
         </View>
