@@ -10,6 +10,7 @@ import {
   StatusBar,
   Button
 } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import {useAppState} from './hooks';
 
 /** BLE Modules */
@@ -75,8 +76,8 @@ function App() {
           <ScrollView>
             <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center' }}>
               <Text style={{ fontSize: 32 }}>{`BLE devices (${foundPeripherals.length})`}</Text>
-              {bleState === BleState.on && <Text style={{ fontSize: 24, fontWeight: 'bold', color: 'green' }}>ON</Text>}
-              {bleState === BleState.off && <Text style={{ fontSize: 24, fontWeight: 'bold', color: 'red' }}>OFF</Text>}
+              {bleState === BleState.on && <Icon name="power-off" size={32} color="green" style={{ marginLeft: 8 }} />}
+              {bleState === BleState.off && <Icon name="power-off" size={32} color="red" style={{ marginLeft: 8 }} />}
             </View>
             {foundPeripherals.map((peripheral) => (
               <View key={peripheral.id} style={{ marginBottom: 16 }}>

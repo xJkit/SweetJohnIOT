@@ -29,6 +29,8 @@ target 'SweetJohnIOT' do
 
   pod 'react-native-ble-manager', :path => '../node_modules/react-native-ble-manager'
 
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
   target 'SweetJohnIOTTests' do
     inherit! :search_paths
     # Pods for testing

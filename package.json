@@ -6,12 +6,14 @@
     "start": "react-native start",
     "run:iphone8": "react-native run-ios --simulator \"iPhone 8\"",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "postinstall": "cd ios && pod install"
   },
   "dependencies": {
     "react": "16.8.6",
     "react-native": "0.60.5",
-    "react-native-ble-manager": "^6.6.8"
+    "react-native-ble-manager": "^6.6.8",
+    "react-native-vector-icons": "^6.6.0"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -20,6 +22,7 @@
     "@types/jest": "^24.0.17",
     "@types/react": "^16.9.1",
     "@types/react-native": "^0.60.5",
+    "@types/react-native-vector-icons": "^6.4.1",
     "@types/react-test-renderer": "^16.9.0",
     "babel-jest": "^24.8.0",
     "eslint": "^6.1.0",
