@@ -1,7 +1,9 @@
-import React from 'react';
-import { View, Text, SafeAreaView } from 'react-native';
+import React, {useState, useContext, useEffect, useCallback} from 'react';
+import { View, Text, SafeAreaView, Alert } from 'react-native';
 import { Peripheral } from 'react-native-ble-manager';
 import { Card, Button } from 'react-native-elements';
+import BleContext from './context/BleContext';
+import { BleEventType } from './types';
 
 type BleDeviceDetailViewPropType = {
   navigation: any
@@ -9,7 +11,28 @@ type BleDeviceDetailViewPropType = {
 
 function BleDeviceDetailView(props: BleDeviceDetailViewPropType) {
   const peripheral: Peripheral = props.navigation.getParam('peripheral');
+  const { BleManager,bleManagerEmitter } = useContext(BleContext);
+  const [isConnecting, setIsConnecting] = useState(false);
+  const [isDeviceConnected, setDeviceConnected] = useState(false);
+
   const { advertising } = peripheral;
+  const handleConntectedBleDevice = useCallback(
+    (peripheral) => {
+      setIsConnecting(false);
+      BleManager.retrieveServices(peripheral.peripheral)
+      .then((info: any) => {
+          Alert.alert(
+            `${peripheral.peripheral} is connected, info: ${JSON.stringify(info)}`
+          );
+          setDeviceConnected(true);
+        })
+    }, []
+  )
+
+  useEffect(() => {
+    bleManagerEmitter.addListener(BleEventType.ConnectPeripheral, handleConntectedBleDevice);
+    BleManager.isPeripheralConnected(peripheral.id).then(setDeviceConnected);
+  }, [])
 
   return (
     <SafeAreaView>
@@ -30,10 +53,33 @@ function BleDeviceDetailView(props: BleDeviceDetailViewPropType) {
               </>
             )}
             <View style={{ flexDirection: 'row', justifyContent: 'center', paddingTop: 16 }}>
-                <Button
-                  title="Connect"
-                  disabled={!advertising.isConnectable}
-                />
+                {!isDeviceConnected && (
+                  <Button
+                    title="Connect"
+                    onPress={async () => {
+                      try {
+                        setIsConnecting(true);
+                        await BleManager.connect(peripheral.id);
+
+                      } catch (err) {
+                        Alert.alert(`connect failed, reason: ${JSON.stringify(err)}`);
+                      }
+                    }}
+                    disabled={!advertising.isConnectable}
+                    loading={isConnecting}
+                  />
+                )}
+                {(isDeviceConnected) && (
+                  <Button
+                    title="Disconnect"
+                    onPress={async () => {
+                      await BleManager.disconnect(peripheral.id)
+                      setIsConnecting(false);
+                      setDeviceConnected(false);
+                    }}
+                    buttonStyle={{ backgroundColor: 'red' }}
+                  />
+                )}
             </View>
           </>
           )}

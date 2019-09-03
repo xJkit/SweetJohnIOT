@@ -1,9 +1,10 @@
 export enum BleEventType {
+  ConnectPeripheral = 'BleManagerConnectPeripheral',
   DiscoverPeripheral = 'BleManagerDiscoverPeripheral',
-  StopScan = 'BleManagerStopScan',
   DisconnectPeripheral = 'BleManagerDisconnectPeripheral',
   DidUpdateValueForCharacteristic = 'BleManagerDidUpdateValueForCharacteristic',
   DidUpdateState = 'BleManagerDidUpdateState',
+  StopScan = 'BleManagerStopScan',
 };
 
 export enum BleState {
