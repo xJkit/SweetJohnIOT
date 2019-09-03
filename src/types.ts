@@ -11,11 +11,6 @@ export enum BleState {
   off = 'off',
 };
 
-export type PeripheralType = {
-  name: string;
-  id: string;
-};
-
 export enum ActionTypes {
   FIND_PERIPHERAL_DEVICE,
   CLEAR_PERIPHERAL_DEVICE,

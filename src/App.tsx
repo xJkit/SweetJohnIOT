@@ -9,7 +9,7 @@ import {
   ActivityIndicator,
 } from 'react-native';
 import { Button, ListItem } from 'react-native-elements';
-
+import { Peripheral } from 'react-native-ble-manager';
 /** Ble Context */
 import BleContext, { BleProvider } from './context/BleContext';
 /** routing */
@@ -19,9 +19,9 @@ import { createStackNavigator  } from 'react-navigation-stack';
 import BleDeviceDetailView from './BleDeviceDetailView';
 import Icons from './components/Icons';
 import {useAppState} from './hooks';
-import { BleEventType, BleState, PeripheralType, ActionTypes, FindPeripheralDeviceActions } from './types';
+import { BleEventType, BleState, ActionTypes, FindPeripheralDeviceActions } from './types';
 
-const findPeripheralsReducer = (state: PeripheralType[], action: FindPeripheralDeviceActions) => {
+const findPeripheralsReducer = (state: Peripheral[], action: FindPeripheralDeviceActions) => {
   switch (action.type) {
     case ActionTypes.FIND_PERIPHERAL_DEVICE: {
       const isDeviceAlreadyFound = state.find(peripheral => peripheral.id === action.payload.id);
@@ -55,7 +55,7 @@ function App(props: NavigationScreenProps) {
     BleManager.scan([], 3, true)
       .then(() => setIsScanning(true));
   };
-  const handleBleDiscoverPeripherals = useCallback((peripheral: PeripheralType) => {
+  const handleBleDiscoverPeripherals = useCallback((peripheral: Peripheral) => {
     if (peripheral.id) {
       console.log('======= Found new peripheral: ', peripheral.name);
       dispatch({
@@ -101,16 +101,18 @@ function App(props: NavigationScreenProps) {
         </View>
         <View style={{ flex: 1, width: '100%' }}>
           <ScrollView>
-            {foundPeripherals.map((peripheral) => (
-              <ListItem
-                key={peripheral.id}
-                title={peripheral.name || 'Unknown'}
-                titleStyle={{ fontWeight: 'bold' }}
-                subtitle={peripheral.id}
-                subtitleStyle={{ color: 'grey', fontSize: 14 }}
-                onPress={() => navigation.navigate('BleDeviceDetailView')}
-              />
-            ))}
+            {foundPeripherals.map((peripheral) => {
+              return (
+                <ListItem
+                  key={peripheral.id}
+                  title={peripheral.name || 'Unknown'}
+                  titleStyle={{ fontWeight: 'bold' }}
+                  subtitle={peripheral.id}
+                  subtitleStyle={{ color: 'grey', fontSize: 14 }}
+                  onPress={() => navigation.navigate('BleDeviceDetailView', { peripheral })}
+                />
+              );
+              })}
           </ScrollView>
         </View>
         <View style={{ alignItems: 'center', flexDirection: 'row', marginBottom: 8 }}>
@@ -153,11 +155,14 @@ const AppNavigator = createStackNavigator(
       screen: App,
       navigationOptions: {
         header: null,
-      }
+      },
     },
     BleDeviceDetailView: {
       screen: BleDeviceDetailView,
-    }
+      navigationOptions: {
+        title: 'Device Detail',
+      },
+    },
   },
   {
     initialRouteName: 'Home',
