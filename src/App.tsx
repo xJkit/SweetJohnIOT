@@ -1,11 +1,8 @@
-import React, {useEffect, useCallback, useState, useReducer} from 'react';
+import React, {useEffect, useCallback, useState, useReducer, useContext} from 'react';
 import {
   Alert,
   SafeAreaView,
-  StyleSheet,
   ScrollView,
-  NativeModules,
-  NativeEventEmitter,
   View,
   Text,
   StatusBar,
@@ -13,6 +10,8 @@ import {
 } from 'react-native';
 import { Button, ListItem } from 'react-native-elements';
 
+/** Ble Context */
+import BleContext, { BleProvider } from './context/BleContext';
 /** routing */
 import { createAppContainer, NavigationScreenProps } from 'react-navigation';
 import { createStackNavigator  } from 'react-navigation-stack';
@@ -20,13 +19,7 @@ import { createStackNavigator  } from 'react-navigation-stack';
 import BleDeviceDetailView from './BleDeviceDetailView';
 import Icons from './components/Icons';
 import {useAppState} from './hooks';
-
-/** BLE Modules */
 import { BleEventType, BleState, PeripheralType, ActionTypes, FindPeripheralDeviceActions } from './types';
-import BleManager, { Peripheral } from 'react-native-ble-manager';
-const BleManagerModule = NativeModules.BleManager;
-const bleManagerEmitter = new NativeEventEmitter(BleManagerModule);
-/** */
 
 const findPeripheralsReducer = (state: PeripheralType[], action: FindPeripheralDeviceActions) => {
   switch (action.type) {
@@ -43,6 +36,7 @@ const findPeripheralsReducer = (state: PeripheralType[], action: FindPeripheralD
 }
 
 function App(props: NavigationScreenProps) {
+  const { BleManager, bleManagerEmitter } = useContext(BleContext);
   const { navigation } = props;
   const appState = useAppState();
   const [bleState, setBleState] = useState(BleState.on);
@@ -87,7 +81,7 @@ function App(props: NavigationScreenProps) {
       console.log('=== BLE Start Success!===');
       BleManager.checkState() // trigger BleManagerDidUpdateState event
     })
-    .catch(err => console.log('=== Ble initialize error: ', err));
+    .catch((err: any) => console.log('=== Ble initialize error: ', err));
 
     bleManagerEmitter.addListener(BleEventType.DiscoverPeripheral, handleBleDiscoverPeripherals);
     bleManagerEmitter.addListener(BleEventType.DidUpdateState, handleBleUpdateState);
@@ -150,7 +144,9 @@ function App(props: NavigationScreenProps) {
   );
 };
 
+
 /** Routing configs */
+
 const AppNavigator = createStackNavigator(
   {
     Home: {
@@ -168,4 +164,12 @@ const AppNavigator = createStackNavigator(
   },
 );
 
-export default createAppContainer(AppNavigator);
+const AppContainer = createAppContainer(AppNavigator);
+
+export default function AppRoot() {
+  return (
+    <BleProvider>
+      <AppContainer />
+    </BleProvider>
+  );
+}
