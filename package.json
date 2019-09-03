@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "react-native start",
+    "start": "npm run open:project && react-native start",
+    "open:project": "open ios/SweetJohnIOT.xcworkspace",
     "run:iphone8": "react-native run-ios --simulator \"iPhone 8\"",
     "test": "jest",
     "lint": "eslint .",
