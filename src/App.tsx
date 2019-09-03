@@ -17,8 +17,8 @@ import { Button, ListItem } from 'react-native-elements';
 import { createAppContainer, NavigationScreenProps } from 'react-navigation';
 import { createStackNavigator  } from 'react-navigation-stack';
 
-import BleDeviceDetailView from './src/BleDeviceDetailView';
-import Icons from './src/components/Icons';
+import BleDeviceDetailView from './BleDeviceDetailView';
+import Icons from './components/Icons';
 import {useAppState} from './hooks';
 
 /** BLE Modules */
