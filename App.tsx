@@ -13,6 +13,11 @@ import {
 } from 'react-native';
 import { Button, ListItem } from 'react-native-elements';
 
+/** routing */
+import { createAppContainer, NavigationScreenProps } from 'react-navigation';
+import { createStackNavigator  } from 'react-navigation-stack';
+
+import BleDeviceDetailView from './src/BleDeviceDetailView';
 import Icons from './src/components/Icons';
 import {useAppState} from './hooks';
 
@@ -37,7 +42,8 @@ const findPeripheralsReducer = (state: PeripheralType[], action: FindPeripheralD
   }
 }
 
-function App() {
+function App(props: NavigationScreenProps) {
+  const { navigation } = props;
   const appState = useAppState();
   const [bleState, setBleState] = useState(BleState.on);
   const [isScanning, setIsScanning] = useState(false);
@@ -108,6 +114,7 @@ function App() {
                 titleStyle={{ fontWeight: 'bold' }}
                 subtitle={peripheral.id}
                 subtitleStyle={{ color: 'grey', fontSize: 14 }}
+                onPress={() => navigation.navigate('BleDeviceDetailView')}
               />
             ))}
           </ScrollView>
@@ -143,4 +150,22 @@ function App() {
   );
 };
 
-export default App;
+/** Routing configs */
+const AppNavigator = createStackNavigator(
+  {
+    Home: {
+      screen: App,
+      navigationOptions: {
+        header: null,
+      }
+    },
+    BleDeviceDetailView: {
+      screen: BleDeviceDetailView,
+    }
+  },
+  {
+    initialRouteName: 'Home',
+  },
+);
+
+export default createAppContainer(AppNavigator);
